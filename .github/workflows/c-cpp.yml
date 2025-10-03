@@ -22,10 +22,6 @@ jobs:
         pip install --upgrade pip
         # Install your required dependencies here, e.g.:
         # pip install -r requirements.txt
-    - name: Ensure pip is installed
-      run: python3 -m ensurepip --upgrade
-    - name: Install NumPy for Python3
-      run: python3 -m pip install numpy
     - name: Configure CMake
       run: cmake .
     - name: Build
