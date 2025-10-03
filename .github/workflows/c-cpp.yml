@@ -20,9 +20,12 @@ jobs:
         python3 -m venv venv
         source venv/bin/activate
         pip install --upgrade pip
+        pip install numpy
         # Install your required dependencies here, e.g.:
         # pip install -r requirements.txt
     - name: Configure CMake
-      run: cmake .
+      run: |
+        source venv/bin/activate
+        cmake .
     - name: Build
       run: make
